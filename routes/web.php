@@ -43,10 +43,12 @@ Route::resource('blogs',BlogController::class);
 Route::resource('settings',AdminSettingController::class);
 Route::resource('contacts',ContactController::class);
 
+//task send milion mail
+Route::get('emails', [MailController::class, 'index'])->name('admin.emails');
+Route::delete('emails_destroy/{id}', [MailController::class, 'destroy'])->name('admin.emails_destory');
+Route::post('send-bulk-mail', [MailController::class, 'send_mail'])->name('admin.send-bulk-mail');
 
 });
 Route::resource('frontend_contacts',ContactController::class);
 
 
-//task send mail
-Route::get('send-bulk-mail', [MailController::class, 'send_mail'])->name('send-bulk-mail');

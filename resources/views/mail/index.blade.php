@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Ahmed Salha</title>
+    <title> Mail Sent With MailTrip</title>
 </head>
 <body>
     <h1>{{ $details['title'] }}</h1>
